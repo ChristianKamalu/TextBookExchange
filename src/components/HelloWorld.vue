@@ -1,5 +1,6 @@
 <template>
  <div>
+ <navbar/>
  <div><h1>Shrubs Textbooks</h1></div>
  <!--<img style="width: 100px" src="../assets/shrubslogo3.png">-->
     <div class="dropdown">
@@ -8,8 +9,7 @@
     <a href="#">Buy</a>
     <a href="#">Sell</a>
     <a href="#">How it Works</a>
-    <a href="#">Login</a>
-    <a href="#">Sign Up</a>
+
   </div>
 </div>
 
@@ -23,11 +23,16 @@
 </template>
 
 <script>
+import navbar from './navbar'
+import modal from './modal'
+
 export default {
   name: 'HelloWorld',
+  components: { navbar, modal },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
+      
     }
   }
 
