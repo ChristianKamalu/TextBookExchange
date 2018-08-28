@@ -19,7 +19,7 @@ import login from './login'
 export default {
   components: { signup, login },
   name: 'modal',
-  props: {signup: boolean,},
+  props: [signup],
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',

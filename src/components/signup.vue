@@ -3,44 +3,39 @@
  <div class="container has-text-centered">
                 <div class="column is-4 is-offset-4">
                     <h3 class="title has-text-grey">Signup</h3>
-                    <p class="subtitle has-text-grey">Please login to proceed.</p>
+                    <p class="subtitle has-text-grey">Create your account.</p>
                     <div class="box">
                         <figure class="avatar">
-                            <img src="https://placehold.it/128x128">
+                            <!--<img src="https://placehold.it/128x128">-->
                         </figure>
                         <form>
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="email" placeholder="Full Name" autofocus="">
+                                    <input type="text" placeholder="Full Name" autofocus>
                                 </div>
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="email" placeholder="Your Email" autofocus="">
+                                    <input type="email" placeholder="Your Email" >
                                 </div>
                             </div>
 
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="password" placeholder="Your Password">
+                                    <input type="password" placeholder="Your Password">
                                 </div>
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <input class="input is-large" type="password" placeholder="Confirm Password">
+                                    <input type="password" placeholder="Confirm Password">
                                 </div>
                             </div>
-                            <div class="field">
-                                <label class="checkbox">
-                  <input type="checkbox">
-                  Remember me
-                </label>
-                            </div>
-                            <button class="button is-block is-info is-large is-fullwidth">Sign Up</button>
+                            
+                            <button style="margin-top: 2em" class="button is-block is-info is-large is-fullwidth">Sign Up</button>
                         </form>
                     </div>
                     <p class="has-text-grey">
-                        <a href="../">Login</a> &nbsp;·&nbsp
+                        Already have an account? <router-link to="/login">Log in</router-link> &nbsp;·&nbsp
                         <a href="../">Need Help?</a>
                     </p>
                 </div>
@@ -80,7 +75,10 @@ input:hover{
     outline: none;
 }
 input {
-    font-size: 20px;
+    font-size: 1.5em;
+    width: 100%;
+    height: 2.25em;
+    padding: 1em;
 }
 ::-webkit-input-placeholder {
    text-align: center;
@@ -100,53 +98,5 @@ a {
   color: #42b983;
 }
 
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    width: 160px;
-}
 
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-    position: relative;
-    display: inline-block;
-    margin-top: 5em;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-   
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
 </style>

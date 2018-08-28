@@ -5,11 +5,11 @@ module.exports = {
   development: {
     client: 'mariasql',
     connection: {
-      host: '127.0.0.1',
-      user: 'root',
-      passord: '',
-      db: 'shrubs',
-      charset: 'utf8',
+      host     : '127.0.0.1',
+      user     : 'root',
+      password : '',
+      db : 'shrubs',
+      charset  : 'utf8'
     }
   },
 

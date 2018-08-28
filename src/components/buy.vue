@@ -1,36 +1,43 @@
 <template>
-
-<div class='container' style="margin-bottom: 10%;">
-    <div class='row'>
-        <div class="dropdown btn">
-            <button class="dropbtn">Menu</button>
-        <div class="dropdown-content">
-            <router-link to="/">Home</router-link>
-            <router-link to="/buy">Buy</router-link>
-            <a href="#">Sell</a>
-            <a href="#">How it Works</a>
-        </div>
-        </div>
+<div>
+     <div style='margin: auto;'>
+        <input type='search' placeholder='Search' style='text-align: left; width: 60%; height: 2.5em; padding: 20px;'></input>
     </div>
-        
-    <div style="position: absolute; top: 0; right: 0;" class='righty btn'>
-        <button class='righty'><router-link to="/signup">Sign Up</router-link></button> 
-        <button class='righty'><router-link to="/login">Login</router-link></button>
+    <div style="margin-top: 3%;">
+        <div class="dropdown btn" style="margin-right: 20%;">
+            <button class="dropbtn">School</button>
+        <div class="dropdown-content">
+            <router-link to="/">Brigham Young University</router-link>
+            <router-link to="/buy">Utah Valley University</router-link>
+            <a href="#">University of Utah</a>
+            <a href="#">Utah State University</a>
+            <a href="#">Weber State University</a>
+        </div>
+        </div>
+        <div class="dropdown btn">
+            <button class="dropbtn">Subject</button>
+        <div class="dropdown-content">
+            <router-link to="/">Science</router-link>
+            <router-link to="/buy">Math</router-link>
+            <a href="#">Technology</a>
+            <a href="#">English</a>
+            <a href="#">History</a>
+        </div>
+        </div> 
     </div>
 </div>
-
 </template>
 
 <script>
 import buttonmenu from './buttonmenu'
 
 export default {
-  name: 'navbar',
+  name: 'buy',
   components: { buttonmenu },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      
+      signup: False,
     }
   },
   methods: {
@@ -45,25 +52,21 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-    body {
-    line-height: 0px;
+    input:focus{
+    background-color: #4caf500f;
+    outline: none;
     }
-    .container {
-        padding: 4px;
-
+    input:hover{
+        background-color: #4caf500f;
+        outline: none;
     }
-    .row {
-        text-align: center;
-        position: absolute; 
-        top: 0; left: 0; 
-        margin-left: 1em;
-    }
-    .btn {
-        display: inline-block; 
-    }
-    .righty {
-        font-size: 18px;
+    input {
+    font-size: 20px;
+    //border: .5px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-image: url('//assets/searchIcon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
     }
     button {
         padding: .5em;
@@ -76,15 +79,14 @@ export default {
         background-color: #4caf500f;
         outline: none;
     }
-    .dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
+        .dropbtn {
+    background-color: white;
+    color: #4CAF50;
+    padding: 8px;
     font-size: 16px;
-    border: none;
     cursor: pointer;
     width: 160px;
-    
+    border: .5px solid #4CAF50;
     }
 
     /* The container <div> - needed to position the dropdown content */
@@ -125,6 +127,6 @@ export default {
 
     /* Change the background color of the dropdown button when the dropdown content is shown */
     .dropdown:hover .dropbtn {
-        background-color: #3e8e41;
+        background-color: white;
     }
 </style>
