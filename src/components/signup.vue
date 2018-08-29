@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                             
-                            <button style="margin-top: 2em" class="button is-block is-info is-large is-fullwidth">Sign Up</button>
+                            <button style="margin-top: 2em" class="button is-block is-info is-large is-fullwidth"><router-link to="/">Sign Up</router-link></button>
                         </form>
                     </div>
                     <p class="has-text-grey">
