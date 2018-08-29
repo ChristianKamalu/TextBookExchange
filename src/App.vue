@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-   <navbar/>
+    <navbar/>
     <router-view/>
+    <sitefooter/>
   </div>
 </template>
 
 <script>
 import navbar from './components/navbar'
 import modal from './components/modal'
+import sitefooter from './components/sitefooter'
 
 export default {
   name: 'App',
-  components: { navbar, modal },
+  components: { navbar, modal, sitefooter },
 }
 </script>
 

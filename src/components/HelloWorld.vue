@@ -8,9 +8,7 @@
 <div style='margin: auto; margin-top: 5em;'>
     <input type='search' placeholder='Search' style='text-align: left; width: 70%; height: 3em; padding: 20px;' autofocus></input>
 </div>
-<footer style='margin: auto; margin-top: 5em;'>
-    A simple textbook exchange created for students, by students.
-</footer>
+
  </div>
 </template>
 
@@ -47,7 +45,7 @@ input {
     font-size: 20px;
     //border: .5px solid black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-image: url('//assets/searchIcon.png');
+    background-image: url('');
     background-position: 10px 10px; 
     background-repeat: no-repeat;
 }

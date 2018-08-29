@@ -4,6 +4,7 @@ import HelloWorld from '@/components/HelloWorld'
 import signup from '@/components/signup'
 import login from '@/components/login'
 import buy from '@/components/buy'
+import sell from '@/components/sell'
     
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
         path: '/buy',
         name: 'buy',
         component: buy
-    }
+    },
+    {
+        path: '/sell',
+        name: 'sell',
+        component: sell
+    },
   ]
 })

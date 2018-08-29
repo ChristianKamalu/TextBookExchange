@@ -8,21 +8,26 @@
                         <figure class="avatar">
                             <!--<img src="https://placehold.it/128x128">-->
                         </figure>
-                        <form>
+                        <form v-on:submit.prevent="register">
                             <div class="field">
                                 <div class="control">
-                                    <input type="text" placeholder="Full Name" autofocus>
+                                    <input type="text" v-model="name" placeholder="Full Name" autofocus>
                                 </div>
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <input type="email" placeholder="Your Email" >
+                                    <input type="text" v-model="username" placeholder="Username" autofocus>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                    <input type="email" v-model="email" placeholder="Your Email" >
                                 </div>
                             </div>
 
                             <div class="field">
                                 <div class="control">
-                                    <input type="password" placeholder="Your Password">
+                                    <input type="password" v-model="password" placeholder="Your Password">
                                 </div>
                             </div>
                             <div class="field">
@@ -46,9 +51,23 @@
 <script>
 export default {
   name: 'signup',
+  methods: {
+    register: function(){
+      this.$store.dispatch('register', {
+        username: this.username,
+        email: this.email,
+        password: this.password,
+        name: this.name,
+      })
+    }
+   },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
+      username: '',
+      email: '',
+      password: '',
+      name: '',
     }
   }
 

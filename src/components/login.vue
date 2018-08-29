@@ -8,16 +8,16 @@
                         <figure class="avatar">
                             <!--<img src="https://placehold.it/128x128">-->
                         </figure>
-                        <form>
+                        <form v-on:submit.prevent="login">
                             <div class="field">
                                 <div class="control">
-                                    <input type="email" placeholder="Your Email" autofocus>
+                                    <input type="email" v-model="email" placeholder="Your Email" autofocus>
                                 </div>
                             </div>
 
                             <div class="field">
                                 <div class="control">
-                                    <input type="password" placeholder="Your Password">
+                                    <input type="password" v-model="password" placeholder="Your Password">
                                 </div>
                             </div>
                             <div class="field">
@@ -41,9 +41,25 @@
 <script>
 export default {
   name: 'login',
+  methods: {
+    login: function() {
+       this.$store.dispatch('login',{
+         email: this.email,
+         password: this.password,
+       }).then(user => {
+	        this.email = '';
+	         this.password = '';
+       });
+     },
+     logout: function() {
+       this.$store.dispatch('logout');
+     }
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
+      email: '',
+      password: '',
     }
   }
 

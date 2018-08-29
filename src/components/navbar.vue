@@ -7,8 +7,8 @@
         <div class="dropdown-content">
             <router-link to="/">Home</router-link>
             <router-link to="/buy">Buy</router-link>
-            <a href="#">Sell</a>
-            <a href="#">How it Works</a>
+            <router-link to="/sell">Sell</router-link>
+            <router-link to="/">How It Works</router-link>
         </div>
         </div>
     </div>
